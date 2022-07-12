@@ -1,0 +1,48 @@
+﻿<Window x:Name="GmapsdataCollector" x:Class="ddddd.MainWindow"
+        
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ddddd"
+        mc:Ignorable="d"
+        Title="GmapsdataCollector" Height="476" Width="935.353" Foreground="{x:Null}" Closing="Window_Closing">
+
+  <Grid  Margin="0,0,2,0">
+
+    <DockPanel HorizontalAlignment="Right" Height="54" LastChildFill="False" VerticalAlignment="Top" Width="927" Background="#FF2FB428" Margin="-2,0,0,0">
+      <Label Content="Gmaps data collector" Height="54"  Margin="10,0,0,0" Background="#FF2FB428" FontSize="36" FontFamily="Stencil" Foreground="#FF00E453" Width="646"/>
+    </DockPanel>
+    <ComboBox HorizontalAlignment="Left" Margin="0,54,0,0" VerticalAlignment="Top" Width="120" Background="#FF17FF00">
+      <ComboBoxItem Name="Selenium" IsSelected="True" Content="Selenium" />
+     
+    </ComboBox>
+
+
+    <Button Content="Search by key" HorizontalAlignment="Left" Margin="120,54,0,0" VerticalAlignment="Top" Width="106" Height="22" Click="Button_Click" Background="#FF17FF00"/>
+
+    <ListBox Name="holder" HorizontalAlignment="Left" Height="369" Margin="0,76,0,0" VerticalAlignment="Top" Width="917">
+      <ListBoxItem Name="item" Width="908" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0" Height="26" >
+        <ListBox Name="box" BorderThickness="1px" BorderBrush="Transparent" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Width="898" Height="24" SelectionChanged="Box_SelectionChanged">
+          <ListBox.ItemsPanel>
+            <ItemsPanelTemplate>
+              <WrapPanel Name="wrap" IsItemsHost="True" />
+            </ItemsPanelTemplate>
+          </ListBox.ItemsPanel>
+          <TextBox Name="Number" BorderThickness="1px" BorderBrush="#FFB4B4B4" Width="39" HorizontalContentAlignment="Center" Background="Lime">№</TextBox>
+          <TextBox Name="Type" Width="78" BorderThickness="1px" BorderBrush="#FFB4B4B4"  HorizontalContentAlignment="Center" Background="#FF0DFF00">Type</TextBox>
+          <TextBox Name="Name" BorderThickness="1px" BorderBrush="#FFB4B4B4"  HorizontalContentAlignment="Center" Width="125" Background="#FF0DFF00" >Name</TextBox>
+          <TextBox Name="Adres" BorderThickness="1px" BorderBrush="#FFB4B4B4"  HorizontalContentAlignment="Center" Width="145" Background="#FF0DFF00" >Adres</TextBox>
+          <TextBox Name="Open" BorderThickness="1px" BorderBrush="#FFB4B4B4"  HorizontalContentAlignment="Center" Width="105" Background="#FF0DFF00">Open</TextBox>
+          <TextBox Name="PNum" BorderThickness="1px" BorderBrush="#FFB4B4B4"  HorizontalContentAlignment="Center" Width="115" Background="#FF0DFF00">Phone number</TextBox>
+          <TextBox Name="Rats" BorderThickness="1px" BorderBrush="#FFB4B4B4"  HorizontalContentAlignment="Center" Width="67" Background="#FF0DFF00">Ratings</TextBox>
+          <TextBox Name="Web" BorderThickness="1px" BorderBrush="#FFB4B4B4"  HorizontalContentAlignment="Center" Width="123" Background="#FF0DFF00">Web page</TextBox>
+
+        </ListBox>
+      </ListBoxItem>
+    </ListBox>
+    <TextBox Name="keyy" BorderBrush="#FFB4B4B4" BorderThickness="0.5px" TextAlignment="Left" HorizontalAlignment="Left" Height="20" Margin="231,56,0,0" TextWrapping="Wrap" Text="Key to search" VerticalAlignment="Top" Width="575" TextChanged="TextBox_TextChanged" RenderTransformOrigin="0.5,0.5" Background="#FF17FF00"/>
+    <Button Name ="Pause" Content="Pause" HorizontalAlignment="Left" Margin="811,54,0,0" VerticalAlignment="Top" Width="50" Height="22"  Background="#FF17FF00" MouseDown="Button_MouseDown_1" Click="Button_Click_1"/>
+    <Button Name="Continue" Content="Continue" HorizontalAlignment="Left" Margin="861,53,0,0" VerticalAlignment="Top" Width="56" Height="22" Background="#FF17FF00" MouseDown="Button_MouseDown" Click="Button_Click_2"/>
+  </Grid>
+</Window>
