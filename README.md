@@ -1,2 +1,3 @@
 # -GmapsDataCollector-Selenium-
+selenium google maps scraper
 Google maps data-by-name collector. Requies selenium &amp; chrome web browser. HTML element names could be outdated...
